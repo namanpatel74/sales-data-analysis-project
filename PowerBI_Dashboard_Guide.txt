@@ -1,0 +1,28 @@
+WEEK 4 CAPSTONE – POWER BI DASHBOARD GUIDE
+
+Import cleaned_sales_data.csv into Power BI Desktop.
+
+Suggested dashboard:
+1. KPI cards: Total Sales, Total Profit, Total Units Sold, Profit Margin.
+2. Clustered bar chart: Sales by Country.
+3. Bar chart: Sales by Product.
+4. Column chart: Sales by Segment.
+5. Line chart: Monthly Sales (Date hierarchy).
+6. Slicers: Year, Country, Segment, Product, Discount Band.
+
+Suggested DAX measures (table name: cleaned_sales_data):
+Total Sales = SUM(cleaned_sales_data[ Sales])
+Total Profit = SUM(cleaned_sales_data[Profit])
+Total Units = SUM(cleaned_sales_data[Units Sold])
+Profit Margin = DIVIDE([Total Profit], [Total Sales], 0)
+Average Sale = AVERAGE(cleaned_sales_data[ Sales])
+Total Orders/Rows = COUNTROWS(cleaned_sales_data)
+
+Dataset observations:
+- Rows: 700
+- Total sales: 118,726,350.26
+- Total profit: 16,893,702.26
+- Best sales country: United States of America
+- Best sales product: Paseo
+
+Note: A native .pbix file must be created and saved in Power BI Desktop. This package includes the cleaned import data, dashboard design, and DAX measures; it does not fabricate a .pbix file.
